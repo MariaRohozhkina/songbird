@@ -147,7 +147,7 @@ const PlayAgain = (props) => {
             <h2>Поздравляем!</h2>
             <h3>Вы набрали {props.score} очко из 30 :)</h3>
         </div>
-      <div className="next-level-button-container blue-green hide" id="play-again">
+      <div className="next-level-button-container blue-green hide" id="play-again" onClick={props.startAgain}>
         <p>Попробовать ещё раз!</p>
       </div>
       </Fragment>
@@ -159,6 +159,7 @@ class FindingTheRightAnswer extends React.Component {
     super(props);
     this.isItRightAnswer = this.isItRightAnswer.bind(this);
     this.changeLevel = this.changeLevel.bind(this);
+    this.startAgain = this.startAgain.bind(this);
     this.state = {
       isRight: false,
       nameOfBird: '',
@@ -228,6 +229,8 @@ class FindingTheRightAnswer extends React.Component {
         document.getElementById('next-level-button-container').classList.remove('hide');
         document.getElementById('play-again').classList.add('hide');
         document.getElementById('cong').classList.add('hide');
+        document.getElementById(0).classList.add('act');
+        document.getElementById(5).classList.remove('act');
 
         num = getRandomNumber();
 
@@ -271,7 +274,7 @@ class FindingTheRightAnswer extends React.Component {
         event.target.classList.add('green');
       this.setState((state) => {
         return {
-            isRight: !state.isRight,
+            isRight: true,
             nameOfBird: birdsData[this.state.level][num].name,
             imageOfBird: birdsData[this.state.level][num].image,
             speciesOfBird: birdsData[this.state.level][num].species,
@@ -285,7 +288,7 @@ class FindingTheRightAnswer extends React.Component {
       nextLevel.classList.add('blue-green');
 
     } else {
-        if (event.target.parentNode.firstChild !== 'green' && event.target.parentNode.firstChild.nextElementSibling !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green') {
+        if (!this.state.isRight && event.target.parentNode.firstChild !== 'green' && event.target.parentNode.firstChild.nextElementSibling !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green' && event.target.parentNode.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.className !== 'green') {
             event.target.classList.add('red');
         }
         
