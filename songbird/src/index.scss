@@ -1,0 +1,306 @@
+// General
+body {
+  background-color: #222;
+  color: #fff;
+}
+
+#root {
+  margin: 0 auto;
+
+  max-width: 1140px;
+}
+
+// Header
+.logotype {
+  width: 200px;
+
+  opacity: 0.4;
+  border-radius: 11px;
+}
+
+.logotype-and-score-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score {
+  padding-top: 16px;
+
+  font-family: fantasy;
+}
+
+.nav {
+  background-color: #008966;
+  border-radius: 11px;
+}
+
+.list-of-tasks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 34px;
+
+  font-family: fantasy;
+  list-style-type: none;
+  @media screen and (max-width: 736px) {
+    height: 51px;
+  }
+  @media screen and (max-width: 421px) {
+    height: 71px;
+  }
+}
+
+.list-of-tasks li {
+    margin-right: 20px;
+}
+
+// Question
+.question-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 196px;
+
+  background-color: #303030;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    height: 360px;
+  }
+}
+
+.mystery-bird {
+  max-width: 200px;
+  max-height: 180px;
+
+  opacity: 0.8;
+  border-radius: 11px;
+}
+
+.audio-and-name-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+  font-family: fantasy;
+}
+
+.mystery-name-container {
+  border-bottom: 1px solid #444;
+  @media screen and (max-width: 450px) {
+    text-align: center;
+  }
+}
+
+.mystery-name {
+  font-size: 30px;
+}
+
+.audio-container {
+  margin-top: 10px;
+}
+
+.rhap_container {
+  height: 40px;
+  background-color: #008966;
+  border-radius: 11px;
+  outline: none;
+  min-width: initial;
+}
+
+.rhap_progress-container,
+.rhap_button-clear,
+.rhap_volume-bar-area {
+  outline: none;
+}
+
+.rhap_rewind-button,
+.rhap_forward-button {
+  display: none !important;
+}
+
+.rhap_repeat-button,
+.rhap_volume-controls {
+    @media screen and (max-width: 639px) {
+        display: none !important;
+      }
+}
+
+.rhap_main-controls {
+    width: 100%;
+}
+
+// Answers
+.list-of-answers-container {
+  float: left;
+  margin-top: 16px;
+
+  height: 285px;
+  width: 48%;
+
+  background-color: #303030;
+  border: 1px solid #444;
+
+  @media screen and (max-width: 550px) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.list-of-answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 87%;
+}
+
+.list-of-answers li {
+    cursor: pointer;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+    height: 40px;
+    line-height: 40px;
+}
+
+.green {
+    background-color: #01ff0961;
+}
+
+.red {
+    background-color: #ce2c2c80;
+}
+
+.rhap_additional-controls,
+.rhap_volume-controls {
+    width: 100px;
+}
+
+// Description of bird
+.hide {
+  display: none;
+}
+
+.recommendations {
+  padding-top: 7px;
+  padding-left: 20px;
+
+  font-family: fantasy;
+}
+
+.description-of-bird {
+  margin-left: 52%;
+  margin-top: 16px;
+
+  height: 285px;
+  width: 48%;
+
+  background-color: #303030;
+  border: 1px solid #444;
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.image-in-desc-container {
+    display: flex;
+    align-items: center;
+    height: 98%;
+    width: 48%;
+    margin-top: 11%;
+    justify-content: center;
+}
+
+.image-in-desc {
+    max-width: 170px;
+    max-height: 170px;
+    border-radius: 11px;
+}
+
+.desc-container {
+    display: flex;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 98%;
+    width: 48%;
+    font-family: fantasy;
+}
+
+.audio-in-desc {
+    height: 31px;
+}
+
+.audio-in-desc .rhap_container .rhap_controls-section .rhap_additional-controls,
+.audio-in-desc .rhap_container .rhap_controls-section .rhap_volume-controls {
+    display: none;
+}
+
+.name-of-bird-in-desc {
+    height: 36px;
+}
+
+.audio-in-desc .rhap_container .rhap_controls-section .rhap_main-controls{
+    position: relative;
+}
+
+.audio-in-desc .rhap_container .rhap_controls-section .rhap_main-controls .rhap_play-pause-button {
+    position: absolute;
+    left: -60px;
+    top: -38px;
+}
+
+.audio-in-desc .rhap_container {
+    width: 86%;
+    float: right;
+}
+
+.text {
+    font-size: 14px;
+}
+
+// Next level
+.next-level-button-container {
+  margin-top: 14px;
+
+  height: 36px;
+  width: 100%;
+
+  background-color: #303030;
+  border: 1px solid #444;
+  text-align: center;
+  font-family: fantasy;
+}
+
+.next-level-button-container p {
+  line-height: 8px;
+}
+
+.blue-green {
+    background-color: #008966;
+    cursor: pointer;
+}
+
+
+
+.act {
+    background-color: #17bf74;
+    border-radius: 11px;
+}
+
+h2, h3 {
+    font-family: fantasy;
+}
+
+.cong-container {
+    text-align: center;
+    height: 200px;
+}
