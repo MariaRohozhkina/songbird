@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+
+import 'react-h5-audio-player/src/styles.scss';
+
 import logo from './images/songbird.jpg';
 import mysteryBird from './images/black-and-white-bird.jpg';
 import birdsData from './birds';
 import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/src/styles.scss';
 
 import './index.scss';
 
@@ -143,7 +145,7 @@ const NextLevelButton = (props) => {
 const PlayAgain = (props) => {
     return (
         <Fragment>
-        <div class='cong-container hide' id='cong'>
+        <div className='cong-container hide' id='cong'>
             <h2>Поздравляем!</h2>
             <h3>Вы набрали {props.score} очко из 30 :)</h3>
         </div>

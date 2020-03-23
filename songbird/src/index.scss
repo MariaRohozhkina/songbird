@@ -26,7 +26,7 @@ body {
 .score {
   padding-top: 16px;
 
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .nav {
@@ -42,7 +42,7 @@ body {
 
   height: 34px;
 
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
   list-style-type: none;
   @media screen and (max-width: 736px) {
     height: 51px;
@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   width: 75%;
   height: 100%;
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .mystery-name-container {
@@ -188,7 +188,7 @@ body {
   padding-top: 7px;
   padding-left: 20px;
 
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .description-of-bird {
@@ -205,6 +205,10 @@ body {
     width: 100%;
     margin-left: 0;
   }
+
+  @media screen and (max-width: 505px) {
+    height: 400px;
+  }
 }
 
 .image-in-desc-container {
@@ -214,16 +218,28 @@ body {
     width: 48%;
     margin-top: 11%;
     justify-content: center;
+
+    @media screen and (max-width: 505px) {
+    width: 100%;
+  }
 }
 
 .image-in-desc {
     max-width: 170px;
     max-height: 170px;
     border-radius: 11px;
+
+    @media screen and (max-width: 505px) {
+    max-height: 104px;
+  }
 }
 
 .desc-container {
     display: flex;
+
+    @media screen and (max-width: 505px) {
+    flex-direction: column;
+  }
 }
 
 .details {
@@ -232,7 +248,11 @@ body {
     justify-content: center;
     height: 98%;
     width: 48%;
-    font-family: fantasy;
+    font-family: 'Courier New', Courier, monospace;
+
+    @media screen and (max-width: 505px) {
+    width: 100%;
+  }
 }
 
 .audio-in-desc {
@@ -261,6 +281,17 @@ body {
 .audio-in-desc .rhap_container {
     width: 86%;
     float: right;
+
+    @media screen and (max-width: 505px) {
+    margin-left: 13%;
+    float: none;
+  }
+}
+
+.rhap_additional-controls, .rhap_volume-controls {
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 }
 
 .text {
@@ -277,7 +308,7 @@ body {
   background-color: #303030;
   border: 1px solid #444;
   text-align: center;
-  font-family: fantasy;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .next-level-button-container p {
@@ -297,7 +328,7 @@ body {
 }
 
 h2, h3 {
-    font-family: fantasy;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .cong-container {
